@@ -4,7 +4,7 @@ if __name__ == '__main__':
     setup(
         name='forcedimension',
         packages=find_packages(),
-        version='0.1.0',
+        version='0.1.0-beta.1',
         python_requires=">=3.6, <3.7",
         install_requires=[
             "setuptools>=42",
