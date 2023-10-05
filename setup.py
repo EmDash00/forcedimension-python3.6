@@ -2,9 +2,9 @@ from setuptools import setup
 
 if __name__ == '__main__':
     setup(
-        name='forcedimension3.6',
+        name='forcedimension',
         version='0.1.0',
-        python_requires=">=3.6 <3.7",
+        python_requires=">=3.6, <3.7",
         install_requires=[
             "setuptools>=42",
             "wheel",
