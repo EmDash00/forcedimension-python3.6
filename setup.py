@@ -1,8 +1,9 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 if __name__ == '__main__':
     setup(
         name='forcedimension',
+        packages=find_packages(),
         version='0.1.0',
         python_requires=">=3.6, <3.7",
         install_requires=[
