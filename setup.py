@@ -13,5 +13,10 @@ if __name__ == '__main__':
             "pydantic>=1.9.2, <2",
             "numpy>=1.16.4, <2",
             "PyYAML>=6.0.1, <7"
+        ],
+        dependency_links=[
+            "forcedimension-core[numpy] @ "
+            "git+https://github.com/EmDash00/forcedimension-core-python3.6.git"
+            "@v1.0.0"
         ]
     )
