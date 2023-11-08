@@ -11,9 +11,8 @@ if __name__ == '__main__':
             "wheel",
             "typing_extensions >= 4.1.1, <5",
             "PyYAML>=6.0.1, <7",
-            "forcedimension-core['numpy'] @ "
+            "forcedimension-core @ "
             "git+https://github.com/EmDash00/forcedimension-core-python3.6.git"
             "@v1.0.0"
-
         ]
     )
