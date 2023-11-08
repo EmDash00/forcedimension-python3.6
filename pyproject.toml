@@ -1,30 +1,41 @@
-[build-system]
-requires = ["setuptools>=42", "wheel", "typing_extensions >= 4.1.1, <5", "pydantic>=1.9.2, <2", "numpy>=1.16.4, <2"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "forcedimension_legacy"
-version = "0.2.0rc1"
-authors = [
-    { name="Ember Chow", email="emberchow.business@gmail.com" },
-]
-description = "Python Bindings for the ForceDimension SDK"
+[tool.poetry]
+name = "forcedimension-legacy"
+version = "0.2.0b2"
+description = "Unofficial, Experimental, High-Level Python Wrappers for the Force Dimension SDK"
+authors = ["Ember Chow <emberchow.business@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.6"
-license = {file="LICENSE"}
+license = "LGPL-3.0"
+documentation = "https://forcedimension-python-documentation.readthedocs.io/en/latest/"
+repository = "https://github.com/EmDash00/forcedimension-python"
+keywords = ["forcedimension", "haptics", "wrappers"]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 3 - Alpha",
     "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Topic :: System :: Hardware :: Universal Serial Bus (USB) :: Human Interface Device (HID)"
 ]
 
-[project.urls]
-"Homepage" = "https://github.com/EmDash00/forcedimension-python"
+[tool.poetry.dependencies]
+python = ">=3.8,<3.13"
+forcedimension-core = {
+  git = "https://github.com/EmDash00/forcedimension-core-python3.6.git",
+  tag = "v1.0.0",
+  extras = ["numpy"]
+}
+pyyaml = "^6.0"
 
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[virtualenvs]
+in-project = true
